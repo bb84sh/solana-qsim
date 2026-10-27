@@ -1,0 +1,12 @@
+{
+  "format": "bb84-qsim-counts-v1",
+  "circuit_hash": "cac36fb6fc57b1c88e5271d846ff2a4f219baa4c4af593831b3bee756209c8a1",
+  "num_qubits": 5,
+  "backend": "local:statevector_sampler",
+  "source": "LocalSimulator",
+  "shots": 1024,
+  "counts": {
+    "00000": 518,
+    "11111": 506
+  }
+}

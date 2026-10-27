@@ -1,0 +1,12 @@
+{
+  "name": "solana-qsim-tools",
+  "private": true,
+  "type": "module",
+  "description": "Client for the qsim program: record QPU runs and score them on Solana",
+  "scripts": {
+    "qsim": "node solana-qsim/tools/qsim.js"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.0"
+  }
+}

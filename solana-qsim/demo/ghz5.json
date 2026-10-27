@@ -1,0 +1,11 @@
+{
+  "format": "bb84-qsim-circuit-v1",
+  "name": "ghz5",
+  "source": "ghz:5",
+  "num_qubits": 5,
+  "gates": 5,
+  "bytes": 14,
+  "hex": "0000200001200102200203200304",
+  "circuit_hash": "cac36fb6fc57b1c88e5271d846ff2a4f219baa4c4af593831b3bee756209c8a1",
+  "qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[5];\ncreg meas[5];\nh q[0];\ncx q[0],q[1];\ncx q[1],q[2];\ncx q[2],q[3];\ncx q[3],q[4];\nbarrier q[0],q[1],q[2],q[3],q[4];\nmeasure q[0] -> meas[0];\nmeasure q[1] -> meas[1];\nmeasure q[2] -> meas[2];\nmeasure q[3] -> meas[3];\nmeasure q[4] -> meas[4];"
+}

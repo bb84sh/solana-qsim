@@ -1,0 +1,20 @@
+[toolchain]
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+qproof = "6pxqWGoxSRBwmL6GJie9BD43HGe3ybFu9xmJQ24TvcXB"
+qsim = "6sHufVFfaMwxPuDKxBuV8qZqNot8bJNgtFKhZKXHdhSw"
+
+[programs.devnet]
+qproof = "6pxqWGoxSRBwmL6GJie9BD43HGe3ybFu9xmJQ24TvcXB"
+qsim = "6sHufVFfaMwxPuDKxBuV8qZqNot8bJNgtFKhZKXHdhSw"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "cargo test"

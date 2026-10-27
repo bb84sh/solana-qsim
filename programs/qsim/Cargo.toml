@@ -1,0 +1,38 @@
+[package]
+name = "qsim"
+version = "0.1.0"
+description = "bb84 qsim: run small quantum circuits inside a Solana program and score QPU results against them"
+edition.workspace = true
+rust-version.workspace = true
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "qsim"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "qproof/idl-build"]
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+
+[dependencies]
+anchor-lang = "1.2.1"
+solana-qsim = { path = "../../solana-qsim" }
+qproof = { path = "../qproof", features = ["cpi"] }
+solana-sha256-hasher = "3.1.0"
+
+[dev-dependencies]
+litesvm = "0.10.0"
+solana-account = "3"
+solana-message = "3.0.1"
+solana-transaction = "3.0.2"
+solana-signer = "3.0.0"
+solana-keypair = "3.0.1"
+solana-sha256-hasher = { version = "3.1.0", features = ["sha2"] }
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }

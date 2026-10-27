@@ -1,0 +1,10 @@
+target/
+node_modules/
+.anchor/
+.env
+*.pending.json
+keys/
+test-ledger/
+.venv/
+__pycache__/
+.DS_Store
